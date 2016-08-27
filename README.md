@@ -14,15 +14,15 @@ Hay tres posibilidades para el bono por resultados:
 $80 fijos,  
 o nada
 Hay dos bonos por presentismo:
+
 en uno es $100 pesos si la persona a quien se aplica no faltó nunca, $50 si faltó sólo un día, $0 en cualquier otro caso. 
 En el otro siempre es $0, independientemente de las faltas. 
-Hacer un test con pepe como cadete, con un bono resultado $80, y tiene un bono presentismo por faltas.. Debería tener $15080 de sueldo.
-Hacer un test con pepe como gerente, con un bono resultados de porcentaje, y con un bono de presentismo independiente de las faltas. El sueldo debe dar $11000.
+
+1) Hacer un test con pepe como cadete, con un bono resultado $80, y tiene un bono presentismo por faltas.. Debería tener $15080 de sueldo.
+
+2) Hacer un test con pepe como gerente, con un bono resultados de porcentaje, y con un bono de presentismo independiente de las faltas. El sueldo debe dar $11000.
+
 Tests adicionales sugeridos: 
-pepe cadete con bono de resultados por porcentaje, con un bono por presentismo de faltas, nunca faltó. Debería tener $16600 de sueldo.
-pepe cadete con bono de resultados por porcentaje, con un bono por presentismo de faltas, falto 1 día. Debería tener $16550 de sueldo.
+3) Realizar un test con pepe cadete con bono de resultados por porcentaje, con un bono por presentismo de faltas, nunca faltó. Debería tener $16600 de sueldo.
 
-
-
-
-
+4) Realizar un test con pepe cadete con bono de resultados por porcentaje, con un bono por presentismo de faltas, falto 1 día. Debería tener $16550 de sueldo.
