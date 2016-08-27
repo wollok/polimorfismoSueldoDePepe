@@ -12,15 +12,6 @@ object pepe {
 	
 }
 
-class Persona {
-	method something() {
-		return "great!"
-	}
-}
-
-class Algo inherits Persona{
-	
-}
 
 object bonoNulo {
 	method monto(cantidad) = return 0 
