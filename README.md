@@ -1,6 +1,6 @@
 Sueldo de Pepe
 
-<img src="img/money.png" height="150" width="500">
+<img src="img/money.jpg" height="150" width="500">
 
 [polimorfismo, if]
 
