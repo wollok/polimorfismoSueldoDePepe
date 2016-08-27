@@ -12,11 +12,10 @@ El neto depende de la categoría, hay varias categorías. Por ejemplo, los geren
 Hay tres posibilidades para el bono por resultados:  
 10% sobre el neto,  
 $80 fijos,  
-o nada
+o nada.
+
 Hay dos bonos por presentismo:
-
-en uno es $100 pesos si la persona a quien se aplica no faltó nunca, $50 si faltó sólo un día, $0 en cualquier otro caso. </br>
-
+En uno es $100 pesos si la persona a quien se aplica no faltó nunca, $50 si faltó sólo un día, $0 en cualquier otro caso. </br>
 En el otro siempre es $0, independientemente de las faltas. 
 
 1) Hacer un test con pepe como cadete, con un bono resultado $80, y tiene un bono presentismo por faltas.. Debería tener $15080 de sueldo.
