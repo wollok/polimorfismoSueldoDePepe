@@ -1,5 +1,7 @@
 Sueldo de Pepe
 
+<img src="img/money.png" height="150" width="500">
+
 [polimorfismo, if]
 
   Implementar en Wollok los objetos necesarios para calcular el sueldo de pepe.
