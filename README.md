@@ -14,7 +14,7 @@ Hay tres posibilidades para el bono por resultados:
 $80 fijos,  
 o nada.
 
-Hay dos bonos por presentismo:
+Hay dos bonos por presentismo:</br>
 En uno es $100 pesos si la persona a quien se aplica no faltó nunca, $50 si faltó sólo un día, $0 en cualquier otro caso. </br>
 En el otro siempre es $0, independientemente de las faltas. 
 
