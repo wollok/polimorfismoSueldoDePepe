@@ -1,0 +1,7 @@
+import sueldoPepe.*
+
+test "sueldo pepe" {
+
+	assert.equals(10050, pepe.sueldo())
+
+}
