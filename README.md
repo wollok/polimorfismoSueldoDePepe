@@ -6,7 +6,8 @@
 
 Implementar en Wollok los objetos necesarios para calcular el sueldo de pepe.
   
-El sueldo se pepe se calcula así: sueldo = neto + bono x presentismo + bono x resultados.
+El sueldo se pepe se calcula así: </br>
+**sueldo = neto + bono x presentismo + bono x resultados**.
 
 El neto depende de la categoría, hay varias categorías. Por ejemplo, los gerentes que ganan $10000 de neto, y cadetes que ganan $15000, aunque puede haber más.
 Hay tres posibilidades para el **bono por resultados**:  
