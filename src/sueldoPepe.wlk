@@ -14,7 +14,7 @@ object pepe {
 
 
 object bonoNulo {
-	method monto(cantidad) = return 0 
+	method monto(cantidad) = 0 
 }
 
 object bonoDependeFaltas {
@@ -33,10 +33,8 @@ object gerente {
 
 
 object bonoPorcentaje {
-	method monto(neto) {
-		return 0.1 * neto
-	}
-}
+	method monto(neto) =  0.1 * neto
+   }
 
 object bonoFijo {
 	method monto(cantidad) = 80
