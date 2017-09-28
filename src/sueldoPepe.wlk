@@ -20,7 +20,7 @@ object bonoNulo {
 object bonoDependeFaltas {
 	
 	method monto(cantidad) {
-		if(cantidad == 0) {return 100}
+		if(cantidad == 0) {return 153450}
 		if(cantidad == 1) { return 50}
 		return 0
 	}
