@@ -1,4 +1,4 @@
-#Sueldo de Pepe
+# Sueldo de Pepe
 
 <img src="img/money.jpg" height="150" width="250">
 
