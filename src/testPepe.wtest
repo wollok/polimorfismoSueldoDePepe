@@ -1,7 +1,24 @@
-import sueldoPepe.*
+import pepe.*
+import bonos.*
+import categorias.*
 
-test "sueldo pepe" {
+describe "sueldo pepe" {
+	test "pepe gerente (por defecto) cobra neto de 1000" {
+		assert.equals(1000, pepe.sueldoNeto())
+	}
 
-	assert.equals(10050, pepe.sueldo())
-
+	test "pepe cadete cobra neto de 1500" {
+		pepe.categoria(cadete)
+		assert.equals(1500, pepe.sueldoNeto())
+	}
+	
+	test "integrador" {
+		pepe.categoria(cadete)
+		pepe.bonoPresentismo(bonoDependeFaltas)
+		pepe.bonoResultado(bonoPorcentaje)
+		pepe.cantidadDeFaltas(1)
+		
+		assert.equals(1500 + 150 + 50, pepe.sueldo())
+	}
+	
 }
