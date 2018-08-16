@@ -9,29 +9,29 @@ describe "bonos" {
 	}
 
 	test "bono según faltas, con una falta suma 50" {
-		pepe.cantidadDeFaltas(1)
+		pepe.setCantidadDeFaltas(1)
 		assert.equals(50, bonoDependeFaltas.monto(pepe))
 	}
 
 	test "bono según faltas, con dos o más faltas no suma nada" {
-		pepe.cantidadDeFaltas(2)
+		pepe.setCantidadDeFaltas(2)
 		assert.equals(0, bonoDependeFaltas.monto(pepe))
 
-		pepe.cantidadDeFaltas(3)
+		pepe.setCantidadDeFaltas(3)
 		assert.equals(0, bonoDependeFaltas.monto(pepe))
 	}
 	
 	test "bono por porcentaje, suma 10%" {
 		assert.equals(1000, bonoPorcentaje.monto(pepe))
 
-		pepe.categoria(cadete)
+		pepe.setCategoria(cadete)
 		assert.equals(1500, bonoPorcentaje.monto(pepe))		
 	}
 	
 	test "bono fijo suma 80" {
 		assert.equals(80, bonoFijo.monto(pepe))
 
-		pepe.categoria(cadete)
+		pepe.setCategoria(cadete)
 		assert.equals(80, bonoFijo.monto(pepe))		
 	}
 }

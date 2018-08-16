@@ -2,12 +2,21 @@ import categorias.*
 import bonos.*
 
 object pepe {
-	var property categoria = gerente
-	var property bonoPresentismo = bonoNulo
-	var property bonoResultado = bonoNulo
-	var property cantidadDeFaltas = 0
+	var categoria = gerente
+	var bonoPresentismo = bonoNulo
+	var bonoResultado = bonoNulo
+	var cantidadDeFaltas = 0
 	
-	method sueldoNeto() = categoria.neto()
+	method setCategoria(cat) { categoria = cat }
+	method setBonoPresentismo(bono) { bonoPresentismo = bono }
+	method setBonoResultado(bono) { bonoResultado = bono }
+	method setCantidadDeFaltas(cantidad) { cantidadDeFaltas = cantidad }
 	
-	method sueldo() = self.sueldoNeto() + bonoPresentismo.monto(self) +  bonoResultado.monto(self)
+	method cantidadDeFaltas() { return cantidadDeFaltas }
+	
+	method sueldoNeto() { return categoria.neto() }
+	method sueldo() {
+		return self.sueldoNeto() + bonoPresentismo.monto(self) +  bonoResultado.monto(self)	
+	}
+	
 }
