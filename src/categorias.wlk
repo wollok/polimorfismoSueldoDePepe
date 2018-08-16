@@ -1,9 +1,9 @@
 
 object gerente {
-	method neto() = 1000
+	method neto() = 10000
 }
 
 object cadete {
-	method neto() = 1500
+	method neto() = 15000
 }
 

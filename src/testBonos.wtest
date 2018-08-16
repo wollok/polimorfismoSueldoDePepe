@@ -22,10 +22,10 @@ describe "bonos" {
 	}
 	
 	test "bono por porcentaje, suma 10%" {
-		assert.equals(100, bonoPorcentaje.monto(pepe))
+		assert.equals(1000, bonoPorcentaje.monto(pepe))
 
 		pepe.categoria(cadete)
-		assert.equals(150, bonoPorcentaje.monto(pepe))		
+		assert.equals(1500, bonoPorcentaje.monto(pepe))		
 	}
 	
 	test "bono fijo suma 80" {
