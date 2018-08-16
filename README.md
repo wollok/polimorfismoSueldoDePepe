@@ -42,9 +42,24 @@ Debería tener $15080 de sueldo.
 
 1. Hacer un test con pepe como gerente, con un bono resultados de porcentaje, y con un bono de presentismo independiente de las faltas. El sueldo debe dar $11000.
 
+1. Testear por separado cada bono, con Pepe como gerente y como cadete (o sea, hacer dos assert por cada bono).
 
 ## Tests adicionales sugeridos 
 
 1. Realizar un test con pepe cadete con bono de resultados por porcentaje, con un bono por presentismo de faltas, nunca faltó. Debería tener $16600 de sueldo.
 
 1. Realizar un test con pepe cadete con bono de resultados por porcentaje, con un bono por presentismo de faltas, falto 1 día. Debería tener $16550 de sueldo.
+
+
+## Más variantes
+
+1. Definir a **Sofía**, otra persona de la que hay que calcular el sueldo. Sofía solamente tiene bono por resultados, o sea que su sueldo se calcula como **neto + bono x resultados**. <br>
+A su vez, su neto es un 30% superior a lo que indica su categoría. P.ej. si Sofía es gerente, su neto es 13000. Obviamente, si Pepe es gerente, su neto es 10000, el incremento se aplica _solamente_ a Sofía. 
+
+1. Agregar las siguientes categorías
+  - **vendedor**: <br> su neto es de 20000 pesos. Si hay muchas ventas, hay un aumento de 25%, o sea pasa a 25000. <br> El objeto que representa a esta categoría tiene que entender los mensajes `activarAumentoPorMuchasVentas()` y `desactivarAumentoPorMuchasVentas()`.
+  
+  - **medio tiempo**: en realidad, es un modificador sobre otra categoría, que se asigna enviando el mensaje `medioTiempo.setCategoriaBase(categoria)`. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad de lo que indica la categoría base. <br>
+  P.ej. si definimos `medioTiempo.setCategoriaBase(gerente)`, entonces el neto de `medioTiempo` es 5000.
+
+    
