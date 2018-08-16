@@ -12,13 +12,22 @@ describe "sueldo pepe" {
 		assert.equals(15000, pepe.sueldoNeto())
 	}
 	
-	test "integrador" {
+	test "integrador pepe una falta" {
 		pepe.setCategoria(cadete)
 		pepe.setBonoPresentismo(bonoDependeFaltas)
 		pepe.setBonoResultado(bonoPorcentaje)
 		pepe.setCantidadDeFaltas(1)
 		
 		assert.equals(15000 + 1500 + 50, pepe.sueldo())
+	}
+
+	test "integrador pepe sin faltas" {
+		pepe.setCategoria(cadete)
+		pepe.setBonoPresentismo(bonoDependeFaltas)
+		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setCantidadDeFaltas(0)
+		
+		assert.equals(15000 + 1500 + 100, pepe.sueldo())
 	}
 	
 }
