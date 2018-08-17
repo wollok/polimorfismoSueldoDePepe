@@ -8,26 +8,27 @@ describe "sueldo pepe" {
 	}
 
 	test "pepe cadete cobra neto de 15000" {
-		pepe.setCategoria(cadete)
+//		pepe.setCategoria(cadete)   agregar
 		assert.equals(15000, pepe.sueldoNeto())
 	}
-	
-	test "integrador pepe una falta" {
-		pepe.setCategoria(cadete)
-		pepe.setBonoPresentismo(bonoDependeFaltas)
-		pepe.setBonoResultado(bonoPorcentaje)
-		pepe.setCantidadDeFaltas(1)
-		
-		assert.equals(15000 + 1500 + 50, pepe.sueldo())
-	}
 
-	test "integrador pepe sin faltas" {
-		pepe.setCategoria(cadete)
-		pepe.setBonoPresentismo(bonoDependeFaltas)
-		pepe.setBonoResultado(bonoPorcentaje)
-		pepe.setCantidadDeFaltas(0)
-		
-		assert.equals(15000 + 1500 + 100, pepe.sueldo())
-	}
+/*
+ * este test esta comentado porque le envia a pepe mensajes que no entiende
+ * cuando la definición de pepe esté completa, debería poder habilitarse este test.
+ * Vale cambiar los nombres de los mensajes que se envían, pero la idea tiene que ser la misma:
+ * hay que setearle a pepe categoría cadete, bono de presentismo por faltas, 
+ * bono de resultado por porcentaje, y que faltó una vez.
+ * 
+ * Este es uno de los tests iniciales, implementar el otro.
+ */ 
+//	test "integrador pepe una falta" {
+//		pepe.setCategoria(cadete)
+//		pepe.setBonoPresentismo(bonoDependeFaltas)
+//		pepe.setBonoResultado(bonoPorcentaje)
+//		pepe.setCantidadDeFaltas(1)
+//		
+//		assert.equals(15000 + 1500 + 50, pepe.sueldo())
+//	}
+
 	
 }
