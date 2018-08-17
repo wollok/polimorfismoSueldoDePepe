@@ -675,11 +675,11 @@ function setDocumentScrollTop(ypos)
 <h2> <a id="m&aacute;s-variantes" class="anchor" href="#m%C3%A1s-variantes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>M&aacute;s variantes</h2> 
 <ol> 
  <li> <p>Definir a <strong>Sof&iacute;a</strong>, otra persona de la que hay que calcular el sueldo. Sof&iacute;a solamente tiene bono por resultados, o sea que su sueldo se calcula como <strong>neto + bono x resultados</strong>. <br /> A su vez, su neto es un 30% superior a lo que indica su categor&iacute;a. P.ej. si Sof&iacute;a es gerente, su neto es 13000. Obviamente, si Pepe es gerente, su neto es 10000, el incremento se aplica <em>solamente</em> a Sof&iacute;a.</p> </li> 
- <li> <p>Agregar las siguientes categor&iacute;as</p> </li> 
-</ol> 
-<ul> 
- <li> <p><strong>vendedor</strong>: <br /> su neto es de 20000 pesos. Si hay muchas ventas, hay un aumento de 25%, o sea pasa a 25000. <br /> El objeto que representa a esta categor&iacute;a tiene que entender los mensajes <code>activarAumentoPorMuchasVentas()</code> y <code>desactivarAumentoPorMuchasVentas()</code>.</p> </li> 
- <li> <p><strong>medio tiempo</strong>: en realidad, es un modificador sobre otra categor&iacute;a, que se asigna enviando el mensaje <code>medioTiempo.setCategoriaBase(categoria)</code>. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad de lo que indica la categor&iacute;a base. <br /> P.ej. si definimos <code>medioTiempo.setCategoriaBase(gerente)</code>, entonces el neto de <code>medioTiempo</code> es 5000.</p> </li> 
-</ul>
+ <li> <p>Agregar las siguientes categor&iacute;as</p> 
+  <ul> 
+   <li> <p><strong>vendedor</strong>: <br /> su neto es de 20000 pesos. Si hay muchas ventas, hay un aumento de 25%, o sea pasa a 25000. <br /> El objeto que representa a esta categor&iacute;a tiene que entender los mensajes <code>activarAumentoPorMuchasVentas()</code> y <code>desactivarAumentoPorMuchasVentas()</code>.</p> </li> 
+   <li> <p><strong>medio tiempo</strong>: en realidad, es un modificador sobre otra categor&iacute;a, que se asigna enviando el mensaje <code>medioTiempo.setCategoriaBase(categoria)</code>. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad de lo que indica la categor&iacute;a base. <br /> P.ej. si definimos <code>medioTiempo.setCategoriaBase(gerente)</code>, entonces el neto de <code>medioTiempo</code> es 5000.</p> </li> 
+  </ul> </li> 
+</ol>
 </body>
 </html>

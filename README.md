@@ -57,9 +57,9 @@ Debería tener $15080 de sueldo.
 A su vez, su neto es un 30% superior a lo que indica su categoría. P.ej. si Sofía es gerente, su neto es 13000. Obviamente, si Pepe es gerente, su neto es 10000, el incremento se aplica _solamente_ a Sofía. 
 
 1. Agregar las siguientes categorías
-  - **vendedor**: <br> su neto es de 20000 pesos. Si hay muchas ventas, hay un aumento de 25%, o sea pasa a 25000. <br> El objeto que representa a esta categoría tiene que entender los mensajes `activarAumentoPorMuchasVentas()` y `desactivarAumentoPorMuchasVentas()`.
+	- **vendedor**: <br> su neto es de 20000 pesos. Si hay muchas ventas, hay un aumento de 25%, o sea pasa a 25000. <br> El objeto que representa a esta categoría tiene que entender los mensajes `activarAumentoPorMuchasVentas()` y `desactivarAumentoPorMuchasVentas()`.
   
-  - **medio tiempo**: en realidad, es un modificador sobre otra categoría, que se asigna enviando el mensaje `medioTiempo.setCategoriaBase(categoria)`. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad de lo que indica la categoría base. <br>
+	- **medio tiempo**: en realidad, es un modificador sobre otra categoría, que se asigna enviando el mensaje `medioTiempo.setCategoriaBase(categoria)`. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad de lo que indica la categoría base. <br>
   P.ej. si definimos `medioTiempo.setCategoriaBase(gerente)`, entonces el neto de `medioTiempo` es 5000.
 
     
