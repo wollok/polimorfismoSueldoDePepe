@@ -59,14 +59,14 @@ Debería tener $20800 de sueldo.
 ## Más variantes
 
 1. Definir a **Sofía**, otra persona de la que hay que calcular el sueldo. Sofía solamente tiene bono por resultados, o sea que su sueldo se calcula como ```neto + bono x resultados```. <br>
-A su vez, su neto es un 30% superior a lo que indica su categoría. P.ej. si Sofía es cadete, su neto es 26000. <br>
+A su vez, su neto es un 30% superior a lo que indica su categoría. P.ej. si Sofía es cadete, su neto es 26000. Recordar que para aumentar un número un 30%, se lo multiplica por 1.3. <br>
 **Atención**: si Pepe, o cualquier otra persona que se agregue, es cadete, su neto es 20000. El incremento del 30% se aplica _solamente_ a Sofía. 
 
 
 1. Agregar las siguientes categorías
-	- **vendedor**: <br> su neto es de 16000 pesos. Si hay muchas ventas, hay un aumento de 25%, o sea pasa a 19200. <br> El objeto que representa a esta categoría tiene que entender los mensajes `activarAumentoPorMuchasVentas()` y `desactivarAumentoPorMuchasVentas()`.
+	- **vendedor**: <br> su neto es de 16000 pesos. Si hay muchas ventas, hay un aumento de 25% (multiplicar por 1.25), o sea pasa a 19200. <br> El objeto que representa a esta categoría tiene que entender los mensajes `activarAumentoPorMuchasVentas()` y `desactivarAumentoPorMuchasVentas()`.
   
-	- **medio tiempo**: en realidad, es un modificador sobre otra categoría, que se asigna enviando el mensaje `medioTiempo.setCategoriaBase(categoria)`. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad de lo que indica la categoría base. <br>
+	- **medio tiempo**: en realidad, es un modificador sobre otra categoría, que se asigna enviando el mensaje `medioTiempo.setCategoriaBase(categoria)`. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad (dividir por dos) de lo que indica la categoría base. <br>
   P.ej. si definimos `medioTiempo.setCategoriaBase(gerente)`, entonces el neto de `medioTiempo` es 7500 (la mitad de 15000).
   
     
@@ -81,7 +81,8 @@ A su vez, su neto es un 30% superior a lo que indica su categoría. P.ej. si Sof
 	
 	
 1. Armar un test con estas características
-	- Pepe es cadete, trabaja medio tiempo, tiene bono por resultados de porcentaje, y bono por presentismo demagógico. Hacer que falte una vez.
+	- La categoría base de _medio tiempo_ es _cadete_.
+	- Pepe tiene categoría medio tiempo (o sea, es cadete y trabaja medio tiempo), tiene bono por resultados de porcentaje, y bono por presentismo demagógico. Hacer que falte una vez.
 	- Roque tiene bono por resultados monto fijo. 
 	- Ernesto tiene como compañero a Pepe, y bono por presentismo de ajuste.
 	

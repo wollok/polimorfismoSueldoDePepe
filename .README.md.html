@@ -676,11 +676,11 @@ function setDocumentScrollTop(ypos)
 </ol> 
 <h2> <a id="m&aacute;s-variantes" class="anchor" href="#m%C3%A1s-variantes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>M&aacute;s variantes</h2> 
 <ol> 
- <li> <p>Definir a <strong>Sof&iacute;a</strong>, otra persona de la que hay que calcular el sueldo. Sof&iacute;a solamente tiene bono por resultados, o sea que su sueldo se calcula como <code>neto + bono x resultados</code>. <br /> A su vez, su neto es un 30% superior a lo que indica su categor&iacute;a. P.ej. si Sof&iacute;a es cadete, su neto es 26000. <br /> <strong>Atenci&oacute;n</strong>: si Pepe, o cualquier otra persona que se agregue, es cadete, su neto es 20000. El incremento del 30% se aplica <em>solamente</em> a Sof&iacute;a.</p> </li> 
+ <li> <p>Definir a <strong>Sof&iacute;a</strong>, otra persona de la que hay que calcular el sueldo. Sof&iacute;a solamente tiene bono por resultados, o sea que su sueldo se calcula como <code>neto + bono x resultados</code>. <br /> A su vez, su neto es un 30% superior a lo que indica su categor&iacute;a. P.ej. si Sof&iacute;a es cadete, su neto es 26000. Recordar que para aumentar un n&uacute;mero un 30%, se lo multiplica por 1.3. <br /> <strong>Atenci&oacute;n</strong>: si Pepe, o cualquier otra persona que se agregue, es cadete, su neto es 20000. El incremento del 30% se aplica <em>solamente</em> a Sof&iacute;a.</p> </li> 
  <li> <p>Agregar las siguientes categor&iacute;as</p> 
   <ul> 
-   <li> <p><strong>vendedor</strong>: <br /> su neto es de 16000 pesos. Si hay muchas ventas, hay un aumento de 25%, o sea pasa a 19200. <br /> El objeto que representa a esta categor&iacute;a tiene que entender los mensajes <code>activarAumentoPorMuchasVentas()</code> y <code>desactivarAumentoPorMuchasVentas()</code>.</p> </li> 
-   <li> <p><strong>medio tiempo</strong>: en realidad, es un modificador sobre otra categor&iacute;a, que se asigna enviando el mensaje <code>medioTiempo.setCategoriaBase(categoria)</code>. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad de lo que indica la categor&iacute;a base. <br /> P.ej. si definimos <code>medioTiempo.setCategoriaBase(gerente)</code>, entonces el neto de <code>medioTiempo</code> es 7500 (la mitad de 15000).</p> </li> 
+   <li> <p><strong>vendedor</strong>: <br /> su neto es de 16000 pesos. Si hay muchas ventas, hay un aumento de 25% (multiplicar por 1.25), o sea pasa a 19200. <br /> El objeto que representa a esta categor&iacute;a tiene que entender los mensajes <code>activarAumentoPorMuchasVentas()</code> y <code>desactivarAumentoPorMuchasVentas()</code>.</p> </li> 
+   <li> <p><strong>medio tiempo</strong>: en realidad, es un modificador sobre otra categor&iacute;a, que se asigna enviando el mensaje <code>medioTiempo.setCategoriaBase(categoria)</code>. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad (dividir por dos) de lo que indica la categor&iacute;a base. <br /> P.ej. si definimos <code>medioTiempo.setCategoriaBase(gerente)</code>, entonces el neto de <code>medioTiempo</code> es 7500 (la mitad de 15000).</p> </li> 
   </ul> </li> 
  <li> <p>Agregar dos personas m&aacute;s, seg&uacute;n lo que se detalla a continuaci&oacute;n.</p> 
   <ul> 
@@ -689,7 +689,8 @@ function setDocumentScrollTop(ypos)
   </ul> </li> 
  <li> <p>Armar un test con estas caracter&iacute;sticas</p> 
   <ul> 
-   <li>Pepe es cadete, trabaja medio tiempo, tiene bono por resultados de porcentaje, y bono por presentismo demag&oacute;gico. Hacer que falte una vez.</li> 
+   <li>La categor&iacute;a base de <em>medio tiempo</em> es <em>cadete</em>.</li> 
+   <li>Pepe tiene categor&iacute;a medio tiempo (o sea, es cadete y trabaja medio tiempo), tiene bono por resultados de porcentaje, y bono por presentismo demag&oacute;gico. Hacer que falte una vez.</li> 
    <li>Roque tiene bono por resultados monto fijo.</li> 
    <li>Ernesto tiene como compa&ntilde;ero a Pepe, y bono por presentismo de ajuste.</li> 
   </ul> <p>Verificar que el sueldo de Pepe es 11500, el de Roque es 37800, y el de Ernesto es 10100.</p> </li> 
