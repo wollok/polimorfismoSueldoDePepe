@@ -3,32 +3,18 @@ import bonos.*
 import categorias.*
 
 describe "sueldo pepe" {
-	test "pepe gerente (por defecto) cobra neto de 10000" {
-		assert.equals(10000, pepe.sueldoNeto())
-	}
-
-	test "pepe cadete cobra neto de 15000" {
-//		pepe.setCategoria(cadete)   agregar
-		assert.equals(15000, pepe.sueldoNeto())
-	}
-
-/*
- * este test esta comentado porque le envia a pepe mensajes que no entiende
- * cuando la definición de pepe esté completa, debería poder habilitarse este test.
- * Vale cambiar los nombres de los mensajes que se envían, pero la idea tiene que ser la misma:
- * hay que setearle a pepe categoría cadete, bono de presentismo por faltas, 
- * bono de resultado por porcentaje, y que faltó una vez.
- * 
- * Este es uno de los tests iniciales, implementar el otro.
- */ 
-//	test "integrador pepe una falta" {
+	test "Test inicial 1" {
+		/* esta parte está comentada porque falta agregar los métodos
+		 * correspondientes en el objeto pepe. 
+		 * Descomentar las cuatro líneas que siguen para que el test funcione correctamente. 
+		 */
 //		pepe.setCategoria(cadete)
-//		pepe.setBonoPresentismo(bonoDependeFaltas)
-//		pepe.setBonoResultado(bonoPorcentaje)
-//		pepe.setCantidadDeFaltas(1)
-//		
-//		assert.equals(15000 + 1500 + 50, pepe.sueldo())
-//	}
+//		pepe.setBonoResultado(bonoMontoFijo)
+//		pepe.setBonoPresentismo(bonoPresentismoSegunFaltas)
+//		pepe.setCantidadDeFaltas(3)
+		
+		assert.equals(15000 + 80 + 0, pepe.sueldo())
+	}
 
 	
 }
