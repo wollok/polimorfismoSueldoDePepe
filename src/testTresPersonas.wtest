@@ -1,0 +1,25 @@
+import pepe.*
+import masPersonas.*
+import categorias.*
+import bonos.*
+
+describe "test sobre tres personas" {
+
+	test "pepe, roque y ernesto" {
+		medioTiempo.setCategoriaBase(cadete)
+		
+		pepe.setCategoria(medioTiempo)
+		pepe.setBonoResultados(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoPresentismoDemagogico)
+		pepe.setCantidadDeFaltas(1)
+		
+		roque.setBonoResultados(bonoMontoFijo)
+		
+		ernesto.setCompaniero(pepe)
+		ernesto.setBonoPresentismo(bonoPresentismoAjuste)
+		
+		assert.equals(11500, pepe.sueldo())
+		assert.equals(37800, roque.sueldo())
+		assert.equals(10100, ernesto.sueldo())
+	}
+}

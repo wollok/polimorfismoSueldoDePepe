@@ -5,7 +5,7 @@ import categorias.*
 describe "sueldo pepe" {
 	test "inicial 1 - monto fijo, falto 3 dias" {
 		pepe.setCategoria(cadete)
-		pepe.setBonoResultado(bonoMontoFijo)
+		pepe.setBonoResultados(bonoMontoFijo)
 		pepe.setBonoPresentismo(bonoPresentismoNormal)
 		pepe.setCantidadDeFaltas(3)
 		
@@ -14,7 +14,7 @@ describe "sueldo pepe" {
 
 	test "inicial 2 - monto fijo, falto 3 dias" {
 		pepe.setCategoria(gerente)
-		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoResultados(bonoPorcentaje)
 		pepe.setBonoPresentismo(bonoNulo)
 		pepe.setCantidadDeFaltas(3)
 		
@@ -23,7 +23,7 @@ describe "sueldo pepe" {
 
 	test "adicional 1 - una falta" {
 		pepe.setCategoria(cadete)
-		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoResultados(bonoPorcentaje)
 		pepe.setBonoPresentismo(bonoPresentismoNormal)
 		pepe.setCantidadDeFaltas(1)
 		
@@ -32,7 +32,7 @@ describe "sueldo pepe" {
 
 	test "adicional 2 - sin faltas" {
 		pepe.setCategoria(cadete)
-		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoResultados(bonoPorcentaje)
 		pepe.setBonoPresentismo(bonoPresentismoNormal)
 		pepe.setCantidadDeFaltas(0)
 		
