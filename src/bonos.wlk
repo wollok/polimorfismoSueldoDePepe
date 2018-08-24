@@ -5,23 +5,35 @@ object bonoPorcentaje {
 	method monto(empleado) { return empleado.sueldoNeto() * 10 / 100 }
 }
 
-object bonoFijo {
-	method monto(empleado) { return 80 } 
+object bonoMontoFijo {
+	method monto(empleado) { return 800 } 
 }
 
 
 /*
- * Bono por presentismo: el que depende de las faltas
+ * Bonos por presentismo: normal, ajuste y demagogico
  */
-object bonoDependeFaltas {
+object bonoPresentismoNormal {
 	method monto(empleado) {
 		if (empleado.cantidadDeFaltas() == 0) {
-			return 100
+			return 2000
 		} else if (empleado.cantidadDeFaltas() == 1) {
-			return 50
+			return 1000
 		} else {
 			return 0
 		}
+	}
+}
+
+object bonoPresentismoAjuste {
+	method monto(empleado) {
+		return if (empleado.cantidadDeFaltas() == 0) 100 else 0
+	}
+}
+
+object bonoPresentismoDemagogico {
+	method monto(empleado) {
+		return if (empleado.sueldoNeto() < 18000) 500 else 300
 	}
 }
 

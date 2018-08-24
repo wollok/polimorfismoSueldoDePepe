@@ -640,46 +640,59 @@ function setDocumentScrollTop(ypos)
 </head>
 <body class="markdown-body">
 <h1> <a id="sueldo-de-pepe" class="anchor" href="#sueldo-de-pepe" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sueldo de Pepe</h1> 
-<p><a href="img/money.jpg" target="_blank"><img src="img/money.jpg" height="150" width="250" style="max-width:100%;" /></a></p> 
+<p><a href="img/money.jpg" target="_blank" rel="noopener noreferrer"><img src="img/money.jpg" height="150" width="250" style="max-width:100%;" /></a></p> 
 <p>[polimorfismo, if]</p> 
 <h2> <a id="consigna" class="anchor" href="#consigna" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Consigna</h2> 
 <p>Implementar en Wollok los objetos necesarios para calcular el sueldo de pepe.</p> 
 <p>El sueldo se pepe se calcula as&iacute;: <strong>sueldo = neto + bono x presentismo + bono x resultados</strong>.</p> 
 <h3> <a id="neto" class="anchor" href="#neto" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Neto</h3> 
-<p>El <em>neto</em> depende de la categor&iacute;a, hay varias categor&iacute;as. Por ejemplo, los gerentes que ganan $10000 de neto, y cadetes que ganan $15000, aunque puede haber m&aacute;s.</p> 
+<p>El <em>neto</em> depende de la categor&iacute;a, hay varias categor&iacute;as. Contemplar al menos estas dos: gerentes que ganan $15000 de neto, y cadetes cuyo neto es $20000. Tener en cuenta que puede haber m&aacute;s categor&iacute;as.</p> 
 <h3> <a id="bono-por-resultados" class="anchor" href="#bono-por-resultados" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bono por resultados</h3> 
 <p>Hay tres posibilidades para el <strong>bono por resultados</strong>:</p> 
 <ul> 
- <li>10% sobre el neto,</li> 
- <li>$80 fijos,</li> 
- <li>o nada.</li> 
+ <li> <em>Porcentaje</em>: 10% sobre el neto.</li> 
+ <li> <em>Monto fijo</em>: $800 fijos.</li> 
+ <li> <em>Nulo</em>: nada.</li> 
 </ul> 
 <h3> <a id="bono-por-presentismo" class="anchor" href="#bono-por-presentismo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bono por presentismo</h3> 
-<p>Hay dos <em>bonos por presentismo</em>:</p> 
+<p>Hay varios <strong>bonos por presentismo</strong>:</p> 
 <ul> 
- <li>En uno es $100 pesos si la persona a quien se aplica no falt&oacute; nunca, $50 si falt&oacute; s&oacute;lo un d&iacute;a, $0 en cualquier otro caso. </li> 
- <li>En el otro siempre es $0, independientemente de las faltas.</li> 
+ <li> <em>Normal</em>: $2000 pesos si la persona a quien se aplica no falt&oacute; nunca, $1000 si falt&oacute; s&oacute;lo un d&iacute;a, $0 en cualquier otro caso.</li> 
+ <li> <em>Ajuste</em>: $100 pesos si el empleado no falt&oacute;n nunca, $0 en cualquier otro caso.</li> 
+ <li> <em>Demag&oacute;gico</em>: $500 pesos si el neto es menor a 18000, $300 en caso contrario. Para este bono no importa cu&aacute;ntas veces falt&oacute; el emplado.</li> 
+ <li> <em>Nulo</em>: nada.</li> 
 </ul> 
 <br /> 
-<h2> <a id="tests-iniciales" class="anchor" href="#tests-iniciales" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests iniciales</h2> 
+<h2> <a id="primer-bater&iacute;a-de-tests" class="anchor" href="#primer-bater%C3%ADa-de-tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Primer bater&iacute;a de tests</h2> 
+<h3> <a id="iniciales" class="anchor" href="#iniciales" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Iniciales</h3> 
 <ol> 
- <li> <p>Hacer un test con pepe como cadete, con un bono resultado $80, y tiene un bono presentismo por faltas y falto 3 d&iacute;as. Deber&iacute;a tener $15080 de sueldo.</p> </li> 
- <li> <p>Hacer un test con pepe como gerente, con un bono resultados de porcentaje, y con un bono de presentismo independiente de las faltas. El sueldo debe dar $11000.</p> </li> 
- <li> <p>Testear por separado cada bono, con Pepe como gerente y como cadete (o sea, hacer dos assert por cada bono).</p> </li> 
+ <li> <p>Hacer un test con pepe como cadete, con bono resultado de monto fijo, y bono presentismo normal. Simular que falt&oacute; 3 d&iacute;as. Deber&iacute;a tener $20800 de sueldo.</p> </li> 
+ <li> <p>Hacer un test con pepe como gerente, con el bono resultado por porcentaje, y bono de presentismo nulo. El sueldo debe dar $16500.</p> </li> 
 </ol> 
-<h2> <a id="tests-adicionales-sugeridos" class="anchor" href="#tests-adicionales-sugeridos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests adicionales sugeridos</h2> 
+<h3> <a id="adicionales-sugeridos" class="anchor" href="#adicionales-sugeridos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adicionales sugeridos</h3> 
 <ol> 
- <li> <p>Realizar un test con pepe cadete con bono de resultados por porcentaje, con un bono por presentismo de faltas, nunca falt&oacute;. Deber&iacute;a tener $16600 de sueldo.</p> </li> 
- <li> <p>Realizar un test con pepe cadete con bono de resultados por porcentaje, con un bono por presentismo de faltas, falto 1 d&iacute;a. Deber&iacute;a tener $16550 de sueldo.</p> </li> 
+ <li> <p>Realizar un test con pepe cadete con bono de resultados por porcentaje, bono por presentismo normal, nunca falt&oacute;. Deber&iacute;a tener $24000 de sueldo.</p> </li> 
+ <li> <p>Realizar un test con pepe cadete con bono de resultados por porcentaje, bono por presentismo normal, falto 1 d&iacute;a. Deber&iacute;a tener $23000 de sueldo.</p> </li> 
 </ol> 
 <h2> <a id="m&aacute;s-variantes" class="anchor" href="#m%C3%A1s-variantes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>M&aacute;s variantes</h2> 
 <ol> 
- <li> <p>Definir a <strong>Sof&iacute;a</strong>, otra persona de la que hay que calcular el sueldo. Sof&iacute;a solamente tiene bono por resultados, o sea que su sueldo se calcula como <strong>neto + bono x resultados</strong>. <br /> A su vez, su neto es un 30% superior a lo que indica su categor&iacute;a. P.ej. si Sof&iacute;a es gerente, su neto es 13000. Obviamente, si Pepe es gerente, su neto es 10000, el incremento se aplica <em>solamente</em> a Sof&iacute;a.</p> </li> 
+ <li> <p>Definir a <strong>Sof&iacute;a</strong>, otra persona de la que hay que calcular el sueldo. Sof&iacute;a solamente tiene bono por resultados, o sea que su sueldo se calcula como <code>neto + bono x resultados</code>. <br /> A su vez, su neto es un 30% superior a lo que indica su categor&iacute;a. P.ej. si Sof&iacute;a es cadete, su neto es 26000. <br /> <strong>Atenci&oacute;n</strong>: si Pepe, o cualquier otra persona que se agregue, es cadete, su neto es 20000. El incremento del 30% se aplica <em>solamente</em> a Sof&iacute;a.</p> </li> 
  <li> <p>Agregar las siguientes categor&iacute;as</p> 
   <ul> 
-   <li> <p><strong>vendedor</strong>: <br /> su neto es de 20000 pesos. Si hay muchas ventas, hay un aumento de 25%, o sea pasa a 25000. <br /> El objeto que representa a esta categor&iacute;a tiene que entender los mensajes <code>activarAumentoPorMuchasVentas()</code> y <code>desactivarAumentoPorMuchasVentas()</code>.</p> </li> 
-   <li> <p><strong>medio tiempo</strong>: en realidad, es un modificador sobre otra categor&iacute;a, que se asigna enviando el mensaje <code>medioTiempo.setCategoriaBase(categoria)</code>. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad de lo que indica la categor&iacute;a base. <br /> P.ej. si definimos <code>medioTiempo.setCategoriaBase(gerente)</code>, entonces el neto de <code>medioTiempo</code> es 5000.</p> </li> 
+   <li> <p><strong>vendedor</strong>: <br /> su neto es de 16000 pesos. Si hay muchas ventas, hay un aumento de 25%, o sea pasa a 19200. <br /> El objeto que representa a esta categor&iacute;a tiene que entender los mensajes <code>activarAumentoPorMuchasVentas()</code> y <code>desactivarAumentoPorMuchasVentas()</code>.</p> </li> 
+   <li> <p><strong>medio tiempo</strong>: en realidad, es un modificador sobre otra categor&iacute;a, que se asigna enviando el mensaje <code>medioTiempo.setCategoriaBase(categoria)</code>. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad de lo que indica la categor&iacute;a base. <br /> P.ej. si definimos <code>medioTiempo.setCategoriaBase(gerente)</code>, entonces el neto de <code>medioTiempo</code> es 7500 (la mitad de 15000).</p> </li> 
   </ul> </li> 
+ <li> <p>Agregar dos personas m&aacute;s, seg&uacute;n lo que se detalla a continuaci&oacute;n.</p> 
+  <ul> 
+   <li> <p><strong>Roque</strong>, que en lugar de asign&aacute;rsele una categor&iacute;a, se establece un neto de 28000 pesos. <br /> El sueldo se calcula como <code>neto + bono por resultados + 9000 pesos</code>. <br /> Para el bono por resultados, se usan las mismas opciones que para Pepe.</p> </li> 
+   <li> <p><strong>Ernesto</strong>, que trabaja junto con un compa&ntilde;ero, que puede cambiar. El neto de Ernesto es igual al de su compa&ntilde;ero. <br /> Su sueldo se calcula como <code>neto + bono por presentismo</code>. <br /> Para el bono por presentismo, usar las mismas opciones que para Pepe. Se sabe que Ernesto no falta nunca.</p> </li> 
+  </ul> </li> 
+ <li> <p>Armar un test con estas caracter&iacute;sticas</p> 
+  <ul> 
+   <li>Pepe es cadete, trabaja medio tiempo, tiene bono por resultados de porcentaje, y bono por presentismo demag&oacute;gico. Hacer que falte una vez.</li> 
+   <li>Roque tiene bono por resultados monto fijo.</li> 
+   <li>Ernesto tiene como compa&ntilde;ero a Pepe, y bono por presentismo de ajuste.</li> 
+  </ul> <p>Verificar que el sueldo de Pepe es 11500, el de Roque es 37800, y el de Ernesto es 10100.</p> </li> 
 </ol>
 </body>
 </html>

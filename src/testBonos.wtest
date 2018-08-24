@@ -4,34 +4,56 @@ import bonos.*
 
 describe "bonos" {
 
-	test "bono según faltas, sin faltas (por defecto) suma 100" {
-		assert.equals(100, bonoDependeFaltas.monto(pepe))
+	test "bono por presentismo normal, sin faltas es de 2000" {
+		pepe.setCantidadDeFaltas(0)
+		assert.equals(2000, bonoPresentismoNormal.monto(pepe))
 	}
 
-	test "bono según faltas, con una falta suma 50" {
+	test "bono por presentismo normal, con una falta es de 1000" {
 		pepe.setCantidadDeFaltas(1)
-		assert.equals(50, bonoDependeFaltas.monto(pepe))
+		assert.equals(1000, bonoPresentismoNormal.monto(pepe))
 	}
 
-	test "bono según faltas, con dos o más faltas no suma nada" {
+	test "bono por presentismo normal, con dos o más faltas es de 0" {
 		pepe.setCantidadDeFaltas(2)
-		assert.equals(0, bonoDependeFaltas.monto(pepe))
+		assert.equals(0, bonoPresentismoNormal.monto(pepe))
 
 		pepe.setCantidadDeFaltas(3)
-		assert.equals(0, bonoDependeFaltas.monto(pepe))
+		assert.equals(0, bonoPresentismoNormal.monto(pepe))
 	}
 	
-	test "bono por porcentaje, suma 10%" {
-		assert.equals(1000, bonoPorcentaje.monto(pepe))
+	test "bono por presentismo ajuste" {
+		pepe.setCantidadDeFaltas(0)
+		assert.equals(100, bonoPresentismoAjuste.monto(pepe))
+		pepe.setCantidadDeFaltas(1)
+		assert.equals(0, bonoPresentismoAjuste.monto(pepe))
+		pepe.setCantidadDeFaltas(2)
+		assert.equals(0, bonoPresentismoAjuste.monto(pepe))
+		pepe.setCantidadDeFaltas(3)
+		assert.equals(0, bonoPresentismoAjuste.monto(pepe))
+	}
+
+	test "bono por presentismo demagogico" {
+		pepe.setCategoria(gerente)
+		assert.equals(500, bonoPresentismoDemagogico.monto(pepe))		
 
 		pepe.setCategoria(cadete)
+		assert.equals(300, bonoPresentismoDemagogico.monto(pepe))
+	}
+
+	test "bono por porcentaje, es del 10% del neto" {
+		pepe.setCategoria(gerente)
 		assert.equals(1500, bonoPorcentaje.monto(pepe))		
-	}
-	
-	test "bono fijo suma 80" {
-		assert.equals(80, bonoFijo.monto(pepe))
 
 		pepe.setCategoria(cadete)
-		assert.equals(80, bonoFijo.monto(pepe))		
+		assert.equals(2000, bonoPorcentaje.monto(pepe))
+	}
+	
+	test "bono monto fijo suma 800" {
+		pepe.setCategoria(gerente)
+		assert.equals(800, bonoMontoFijo.monto(pepe))
+
+		pepe.setCategoria(cadete)
+		assert.equals(800, bonoMontoFijo.monto(pepe))		
 	}
 }

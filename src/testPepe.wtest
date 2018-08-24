@@ -3,31 +3,40 @@ import bonos.*
 import categorias.*
 
 describe "sueldo pepe" {
-	test "pepe gerente (por defecto) cobra neto de 10000" {
-		assert.equals(10000, pepe.sueldoNeto())
+	test "inicial 1 - monto fijo, falto 3 dias" {
+		pepe.setCategoria(cadete)
+		pepe.setBonoResultado(bonoMontoFijo)
+		pepe.setBonoPresentismo(bonoPresentismoNormal)
+		pepe.setCantidadDeFaltas(3)
+		
+		assert.equals(20000 + 800 + 0, pepe.sueldo())
 	}
 
-	test "pepe cadete cobra neto de 15000" {
-		pepe.setCategoria(cadete)
-		assert.equals(15000, pepe.sueldoNeto())
-	}
-	
-	test "integrador pepe una falta" {
-		pepe.setCategoria(cadete)
-		pepe.setBonoPresentismo(bonoDependeFaltas)
+	test "inicial 2 - monto fijo, falto 3 dias" {
+		pepe.setCategoria(gerente)
 		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoNulo)
+		pepe.setCantidadDeFaltas(3)
+		
+		assert.equals(15000 + 1500 + 0, pepe.sueldo())
+	}
+
+	test "adicional 1 - una falta" {
+		pepe.setCategoria(cadete)
+		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoPresentismoNormal)
 		pepe.setCantidadDeFaltas(1)
 		
-		assert.equals(15000 + 1500 + 50, pepe.sueldo())
+		assert.equals(20000 + 2000 + 1000, pepe.sueldo())
 	}
 
-	test "integrador pepe sin faltas" {
+	test "adicional 2 - sin faltas" {
 		pepe.setCategoria(cadete)
-		pepe.setBonoPresentismo(bonoDependeFaltas)
 		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoPresentismoNormal)
 		pepe.setCantidadDeFaltas(0)
 		
-		assert.equals(15000 + 1500 + 100, pepe.sueldo())
+		assert.equals(20000 + 2000 + 2000, pepe.sueldo())
 	}
 	
 }
