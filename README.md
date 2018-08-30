@@ -87,3 +87,5 @@ A su vez, su neto es un 30% superior a lo que indica su categoría. P.ej. si Sof
 	- Ernesto tiene como compañero a Pepe, y bono por presentismo de ajuste.
 	
 	Verificar que el sueldo de Pepe es 11500, el de Roque es 37800, y el de Ernesto es 10100.
+	
+	Dibujar el diagrama de referencias que queda al final de este test. Recordar que deben incluirse los objetos definidos por nosotros, _y también_ los números y booleanos.
