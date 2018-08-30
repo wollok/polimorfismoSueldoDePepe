@@ -1,6 +1,6 @@
 
 object gerente {
-	method neto() { return 10000 } 
+	method neto() { return 15000 } 
 }
 
 // agregar cadete
