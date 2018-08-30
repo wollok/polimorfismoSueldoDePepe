@@ -10,10 +10,11 @@ object bonoMontoFijo {
 }
 
 
-// agregar bono por presentismo que depende de la cantidad de faltas 
-object bonoPresentismoSegunFaltas {
+// agregar bonos por presentismo  
+object bonoPresentismoNormal {
 	// agregar el método que se necesita
 }
+// agregar bonos ajuste y demagogico
  
 
 /*

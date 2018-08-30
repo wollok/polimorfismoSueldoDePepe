@@ -10,10 +10,10 @@ describe "sueldo pepe" {
 		 */
 //		pepe.setCategoria(cadete)
 //		pepe.setBonoResultado(bonoMontoFijo)
-//		pepe.setBonoPresentismo(bonoPresentismoSegunFaltas)
+//		pepe.setBonoPresentismo(bonoPresentismoNormal)
 //		pepe.setCantidadDeFaltas(3)
 		
-		assert.equals(15000 + 80 + 0, pepe.sueldo())
+		assert.equals(20000 + 800 + 0, pepe.sueldo())
 	}
 
 	
