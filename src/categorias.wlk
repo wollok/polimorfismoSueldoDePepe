@@ -1,6 +1,17 @@
-
 object gerente {
-	method neto() { return 15000 } 
+	method sueldoNeto() {
+		return 15000
+	}
 }
 
-// agregar cadete
+object cadete {
+	method sueldoNeto() {
+		return 20000
+	}
+}
+
+object presidente {
+	method sueldoNeto() {
+		return 100000
+	}
+}
