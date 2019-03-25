@@ -1,10 +1,20 @@
 import categorias.*
 import bonosResultado.*
+import bonosPresentismo.*
 
 object pepe {
 	var categoria = gerente
 	var bonoResultado = bonoNulo
-	var bonoPresentismo
+	var bonoPresentismo = bonoNormal
+	var faltas = 0
+	
+	method faltas() {
+		return faltas
+	} 
+	
+	method faltas(nuevasFaltas) {
+		faltas = nuevasFaltas
+	}
 	
 	method categoria(_categoria) {
 		categoria = _categoria
