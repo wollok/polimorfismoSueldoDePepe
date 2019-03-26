@@ -2,18 +2,18 @@ import pepe.*
 import categorias.*
 import bonosResultado.*
 
-describe {
-	
+describe "Tests de Pepe" {
+
 	var faltas = 3
-	
-	test "testPepe Cadete ResultadoMontoFijo PresentismoNormal 3Faltas" {
-		//Hacer un test con pepe como cadete, con bono resultado de monto fijo, y bono presentismo normal. 
-		//Simular que faltó 3 días. Debería tener $20800 de sueldo.
+
+	test "Pepe Cadete con ResultadoMontoFijo, PresentismoNormal y 3 Faltas tiene un sueldo de 20800" {
+		// Hacer un test con pepe como cadete, con bono resultado de monto fijo, y bono presentismo normal. 
+		// Simular que faltó 3 días. Debería tener $20800 de sueldo.
 		pepe.categoria(cadete)
 		pepe.bonoResultado(bonoMontoFijo)
 		pepe.faltas(faltas)
-	
 		assert.equals(20800, pepe.sueldo())
-		
-		}
+	}
+
 }
+
