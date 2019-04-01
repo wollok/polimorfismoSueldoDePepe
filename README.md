@@ -10,7 +10,7 @@
 Implementar en Wollok los objetos necesarios para calcular el sueldo de pepe.
   
 El sueldo se pepe se calcula así: </br>
-**sueldo = neto + bono x presentismo + bono x resultados**.
+**sueldo = neto + bono x resultados + bono x presentismo**.
 
 
 ### Neto
@@ -22,7 +22,7 @@ Tener en cuenta que puede haber más categorías.
 
 ### Bono por resultados
 
-Hay tres posibilidades para el **bono por resultados**:  
+Pepe tiene un bono por resultados que va cambiando a lo largo del tiempo. Sabemos que hay tres posibilidades para el **bono por resultados**:  
 * _Porcentaje_: 10% sobre el neto.  
 * _Monto fijo_: $800 fijos.
 * _Nulo_: nada.
@@ -30,7 +30,7 @@ Hay tres posibilidades para el **bono por resultados**:
 
 ### Bono por presentismo
 
-Hay varios **bonos por presentismo**:</br>
+Al igual que el Bono por resultados, Pepe posee un bono por presentismo que puede variar mes a mes. Existen varios **bonos por presentismo**:</br>
 * _Normal_: $2000 pesos si la persona a quien se aplica no faltó nunca, $1000 si faltó sólo un día, $0 en cualquier otro caso. 
 * _Ajuste_: $100 pesos si el empleado no faltón nunca, $0 en cualquier otro caso. 
 * _Demagógico_: $500 pesos si el neto es menor a 18000, $300 en caso contrario. Para este bono no importa cuántas veces faltó el emplado.
