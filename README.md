@@ -1,4 +1,7 @@
 # Sueldo de Pepe
+ 
+[![Build Status](https://travis-ci.org/wollok/polimorfismoSueldoDePepe.svg?branch=master)](https://travis-ci.org/wollok/polimorfismoSueldoDePepe)
+
 
 <img src="img/money.jpg" height="150" width="250">
 
