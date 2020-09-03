@@ -69,8 +69,8 @@ A su vez, su neto es un 30% superior a lo que indica su categoría. P.ej. si Sof
 1. Agregar las siguientes categorías
 	- **vendedor**: <br> su neto es de 16000 pesos. Si hay muchas ventas, hay un aumento de 25% (multiplicar por 1.25), o sea pasa a 19200. <br> El objeto que representa a esta categoría tiene que entender los mensajes `activarAumentoPorMuchasVentas()` y `desactivarAumentoPorMuchasVentas()`.
   
-	- **medio tiempo**: en realidad, es un modificador sobre otra categoría, que se asigna enviando el mensaje `medioTiempo.setCategoriaBase(categoria)`. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad (dividir por dos) de lo que indica la categoría base. <br>
-  P.ej. si definimos `medioTiempo.setCategoriaBase(gerente)`, entonces el neto de `medioTiempo` es 7500 (la mitad de 15000).
+	- **medio tiempo**: en realidad, es un modificador sobre otra categoría, que se asigna enviando el mensaje `medioTiempo.categoriaBase(categoria)`. Indica que la persona trabaja medio tiempo, por lo tanto su neto es la mitad (dividir por dos) de lo que indica la categoría base. <br>
+  P.ej. si definimos `medioTiempo.categoriaBase(gerente)`, entonces el neto de `medioTiempo` es 7500 (la mitad de 15000).
   
     
 1. Agregar dos personas más, según lo que se detalla a continuación.
