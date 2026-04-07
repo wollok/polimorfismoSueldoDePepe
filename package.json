@@ -1,7 +1,8 @@
 {
-  "name": "polimorfismoSueldoDePepe",
-  "version": "1.0.0",
-  "wollokVersion": "4.0.0",
-  "author": "dodain",
-  "license": "ISC"
-}
+    "name": "polimorfismo-sueldo-de-pepe",
+    "version": "1.0.0",
+    "wollokVersion": "4.2.3",
+    "author": "leo",
+    "license": "ISC"
+  }
+  
